@@ -12,20 +12,14 @@ namespace Tasks1_2
 
             Console.Write("Enter square side: ");
             Square MySquare = new Square(calc.GetCalculation());
-            Console.WriteLine("Square area is: " + MySquare.Area);
-            
+            Console.WriteLine("Square area is: " + MySquare.SquareArea());
+ 
             Console.Write("\nEnter circle radius: ");
             Circle MyCircle = new Circle(calc.GetCalculation());
-            Console.WriteLine("Circle area is: " + MySquare.Area);
-          
-
-
-
-
+            Console.WriteLine("Circle area is: " + MyCircle.CircleArea());
 
         }
-
-    }
+            }
 
 }
 

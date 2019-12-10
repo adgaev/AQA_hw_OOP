@@ -10,33 +10,28 @@ namespace Tasks1_2
             double result = 0;
             int i = 0;
 
-
             do
             {
                 isNum = Double.TryParse(Console.ReadLine(), out result);
-                i++; 
-                if (isNum)
+                i++;
+                if (isNum && result > 0)
                 {
-                    Console.WriteLine("Validation is successfull");
                     break;
-                } 
-              
+                }
+
                 else
                 {
                     Console.WriteLine("Entered value is not a number! ");
-                    continue;
                 }
-                
             }
             while (i < 3);
 
-
-            if (!isNum)
-
+            if (result <= 0)
             {
+                Console.Clear();
                 Random num = new Random();
-                result = Convert.ToDouble(num.Next(5, 51) / 10.0); 
-                Console.WriteLine("\nValidation is failed. Random value is set: " + result);
+                result = num.NextDouble() * (5 - 0.5) + 0.5;
+                Console.WriteLine("Validation is failed. Random value is set: " + result);
             }
 
             return result;

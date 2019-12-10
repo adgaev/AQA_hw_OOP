@@ -6,33 +6,27 @@ namespace Tasks1_2
     {
 
         private double _radius;
-        private double _area;
-        double result;
-
+       
         public Circle(double radius)
         {
             this._radius = radius;
-            this._area = CircleArea(Radius);
         }
 
         public double Radius
         {
             get { return _radius; }
-            private set { _radius = result; }
+            private set { _radius = value; }
         }
+
         public double Area
         {
-            get { return _area; }
-            private set { _area = value; }
+            get { return CircleArea(); }
         }
 
-        public double CircleArea(double Radius)
+        public double CircleArea()
         {
             return Math.Round(Math.PI * Math.Pow(_radius, 2), 2);
-
         }
-
     }
-
 }
 
