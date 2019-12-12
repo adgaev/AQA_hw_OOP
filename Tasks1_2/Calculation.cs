@@ -12,7 +12,7 @@ namespace Tasks1_2
             do
             {
                 Double.TryParse(Console.ReadLine(), out result);
-                if (result > 0) //можно убрать isNum
+                if (result > 0)
                 {
                     break;
                 }
