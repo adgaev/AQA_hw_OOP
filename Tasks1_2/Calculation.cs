@@ -6,15 +6,13 @@ namespace Tasks1_2
     {
         public double GetCalculation()
         {
-            bool isNum = false;
             double result = 0;
             int i = 0;
 
             do
             {
-                isNum = Double.TryParse(Console.ReadLine(), out result);
-                i++;
-                if (isNum && result > 0)
+                Double.TryParse(Console.ReadLine(), out result);
+                if (result > 0) //можно убрать isNum
                 {
                     break;
                 }
@@ -23,17 +21,17 @@ namespace Tasks1_2
                 {
                     Console.WriteLine("Entered value is not a number! ");
                 }
+                i++;
             }
+
             while (i < 3);
 
             if (result <= 0)
             {
-                Console.Clear();
                 Random num = new Random();
                 result = num.NextDouble() * (5 - 0.5) + 0.5;
                 Console.WriteLine("Validation is failed. Random value is set: " + result);
             }
-
             return result;
         }
     }

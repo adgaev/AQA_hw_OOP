@@ -19,7 +19,7 @@ namespace Tasks1_2
             Console.WriteLine("Circle area is: " + MyCircle.CircleArea());
 
         }
-            }
+    }
 
 }
 
