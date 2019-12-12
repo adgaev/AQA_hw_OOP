@@ -7,6 +7,8 @@ namespace Tasks1_2
         public double GetCalculation()
         {
             double result = 0;
+            double diagonal = 0; //диагональ квадрата
+            double diameter =0; //диаметр круга
             int i = 0;
 
             do
@@ -34,6 +36,6 @@ namespace Tasks1_2
             }
             return result;
         }
+        
     }
-
 }

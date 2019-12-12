@@ -6,6 +6,7 @@ namespace Tasks1_2
     {
 
         private double _radius;
+        
        
         public Circle(double radius)
         {
@@ -26,6 +27,11 @@ namespace Tasks1_2
         public double CircleArea()
         {
             return Math.Round(Math.PI * Math.Pow(_radius, 2), 2);
+        }
+
+        public double CircleDiameter()
+        {
+            return Math.Round((2*_radius), 2);
         }
     }
 }

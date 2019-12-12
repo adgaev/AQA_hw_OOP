@@ -18,6 +18,8 @@ namespace Tasks1_2
             Circle MyCircle = new Circle(calc.GetCalculation());
             Console.WriteLine("Circle area is: " + MyCircle.CircleArea());
 
+           
+
         }
     }
 

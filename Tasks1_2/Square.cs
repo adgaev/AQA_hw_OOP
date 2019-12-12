@@ -6,7 +6,6 @@ namespace Tasks1_2
     {
 
         private double _side;
- 
    
         public Square(double side)
         {
@@ -29,7 +28,15 @@ namespace Tasks1_2
             return Math.Round(Math.Pow(_side, 2), 2);
         }
 
+        public double SquareDiagonal ()
+        {
+            return Math.Round((Math.Sqrt(2)*_side), 2);
+        }
     }
 
 }
+
+
+
+
 
