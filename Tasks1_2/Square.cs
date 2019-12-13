@@ -23,6 +23,11 @@ namespace Tasks1_2
             get { return SquareArea(); }
         }
 
+        public double Diagonal
+        {
+            get { return SquareDiagonal(); }
+        }
+
         public double SquareArea()
         {
             return Math.Round(Math.Pow(_side, 2), 2);
