@@ -4,32 +4,32 @@ namespace Tasks1_2
 {
     public class Comparison
     {
-
-
-        public void GetComparison(Circle circle, Square square)
+        public String CircleInSquare(double radius, double side)
         {
 
-
-            if (square.Side >= circle.Diameter)
+            if (side >= 2 * radius)
             {
-                Console.WriteLine("The circle is placed in square.");
+                return "\nThe circle is placed in square.";
             }
 
-
-            else if (square.Side < circle.Diameter)
+            else
             {
-                Console.WriteLine("The circle is not placed in square.");
+                return "\nThe circle is not placed in square.";
             }
+      
+        }
 
+        public String SquareInCircle(double radius, double side)
+        {
 
-            else if (circle.Diameter >= square.Diagonal)
+            if (radius >= side / Math.Sqrt(2))
             {
-                Console.WriteLine("The square is placed in circle.");
+                return "\nThe square is placed in circle.";
 
             }
-            else 
+            else
             {
-                Console.WriteLine("The square is not placed in circle.");
+                return "\nThe square is not placed in circle.";
             }
 
         }
