@@ -6,7 +6,6 @@ namespace Tasks1_2
     {
 
         private double _radius;
-
        
         public Circle(double radius)
         {
@@ -23,7 +22,7 @@ namespace Tasks1_2
         {
             get { return CircleArea(); }
         }
-  
+
 
         public double CircleArea()
         {

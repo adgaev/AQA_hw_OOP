@@ -16,7 +16,7 @@ namespace Tasks1_2
             {
                 return "\nThe circle is not placed in square.";
             }
-      
+
         }
 
         public String SquareInCircle(double radius, double side)
@@ -25,8 +25,8 @@ namespace Tasks1_2
             if (radius >= side / Math.Sqrt(2))
             {
                 return "\nThe square is placed in circle.";
-
             }
+
             else
             {
                 return "\nThe square is not placed in circle.";

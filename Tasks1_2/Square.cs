@@ -27,8 +27,7 @@ namespace Tasks1_2
         {
             return Math.Round(Math.Pow(_side, 2), 2);
         }
-
-     
+             
     }
 
 }

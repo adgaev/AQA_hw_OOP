@@ -29,9 +29,10 @@ namespace Tasks1_2
             if (result <= 0)
             {
                 Random num = new Random();
-                result = Math.Round((num.NextDouble() * (5 - 0.5) + 0.5),2);
+                result = Math.Round((num.NextDouble() * (5 - 0.5) + 0.5), 2);
                 Console.WriteLine("Validation is failed. Random value is set: " + result);
             }
+
             return result;
         }
 
