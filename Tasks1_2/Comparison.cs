@@ -4,7 +4,8 @@ namespace Tasks1_2
 {
     public class Comparison
     {
-        public String CircleInSquare(double radius, double side)
+
+        public String CircleInSquare(double side, double radius)
         {
 
             if (side < 2 * radius)
