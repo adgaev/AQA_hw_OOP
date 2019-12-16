@@ -18,13 +18,7 @@ namespace Tasks1_2
             private set { _radius = value; }
         }
 
-        public double Area
-        {
-            get { return CircleArea(); }
-        }
-
-
-        public double CircleArea()
+         public double CircleArea()
         {
             return Math.Round(Math.PI * Math.Pow(_radius, 2), 2);
         }

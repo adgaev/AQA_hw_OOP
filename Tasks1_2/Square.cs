@@ -18,11 +18,6 @@ namespace Tasks1_2
             private set { _side = value; }
         }
 
-        public double Area
-        {
-            get { return SquareArea(); }
-        }
- 
         public double SquareArea()
         {
             return Math.Round(Math.Pow(_side, 2), 2);
