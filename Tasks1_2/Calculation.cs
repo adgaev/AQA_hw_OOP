@@ -17,10 +17,7 @@ namespace Tasks1_2
                     break;
                 }
 
-                else
-                {
-                    Console.WriteLine("Entered value is not a number! ");
-                }
+                Console.WriteLine("Entered value is not a number! ");
                 i++;
             }
 
