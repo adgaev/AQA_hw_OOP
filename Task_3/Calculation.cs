@@ -30,7 +30,6 @@ namespace Task_3
                 else if ((End <= 0) || (Start <= 0))
                 {
                     Console.WriteLine("Entered value(s) is negative, not a number or zero!");
-                    
                 }
 
                 else if (Start - End >= 10)
