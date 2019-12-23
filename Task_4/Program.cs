@@ -3,18 +3,40 @@
 
 namespace Task_4
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+
+        public static void Main()
         {
-           
+            int i = 0;
+            do
+            {
+                Console.Write("Enter word: ");
 
-            Console.WriteLine("Enter the word");
-            string word = Console.ReadLine();
-          
-            Console.ReadKey();
+                string word = Console.ReadLine();
+
+                char[] mirror = word.ToCharArray();
+
+
+                if (!Array.TrueForAll(mirror, char.IsLetter))
+                {
+                    Console.WriteLine("Wrong format. Only alphabet is supported!\n");
+
+                }
+
+                else
+
+                {
+                    Array.Reverse(mirror);
+                    string palindrome = new string(mirror);
+
+                    Console.WriteLine("Palindrome? " + word.Equals(palindrome)+"\n");
+                }
+
+                i++;
+            }
+            while (i < 3);
+
         }
-
-     
     }
 }
