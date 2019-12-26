@@ -1,34 +1,59 @@
 ﻿using System;
 
+
 namespace Task_4
 {
     public class Program
     {
         public static void Main()
         {
-            int i = 0;
-            do
+
+            Console.Write("Enter word: ");
+            string word = Console.ReadLine().ToLower();
+            word = word.Replace(" ", String.Empty);
+
+
+            if (String.IsNullOrEmpty(word))
+
             {
-                Console.Write("Enter word: ");
-                string word = Console.ReadLine();
-                char[] mirror = word.ToCharArray();
-
-                if (!Array.TrueForAll(mirror, char.IsLetter))
-                {
-                    Console.WriteLine("Wrong format. Only alphabet is supported!\n");
-                }
-
-                else
-                {
-                    Array.Reverse(mirror);
-                    string palindrome = new string(mirror);
-                    Console.WriteLine("Palindrome? " + word.Equals(palindrome) + "\n");
-                }
-
-                i++;
+                Console.WriteLine("Is Null Or Empty");
             }
 
-            while (i < 3);
+            else
+            {
+                Console.Write("Palindrome? ");
+
+                if (IsPalindrome(word))
+                {
+
+
+                    Console.WriteLine("Yes");
+                }
+                else
+                {
+                    Console.WriteLine("No");
+                }
+            }
+        }
+
+
+        public static bool IsPalindrome(string word)
+        {
+
+            for (int i = 0; i < word.Length; i++)
+            {
+                if (word[i] != word[word.Length - i - 1])
+                {
+                    return false;
+                }
+            }
+            return true;
+
         }
     }
 }
+
+
+
+
+
