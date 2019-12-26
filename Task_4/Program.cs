@@ -12,7 +12,6 @@ namespace Task_4
             string word = Console.ReadLine().ToLower();
             word = word.Replace(" ", String.Empty);
 
-
             if (String.IsNullOrEmpty(word))
 
             {
@@ -25,10 +24,9 @@ namespace Task_4
 
                 if (IsPalindrome(word))
                 {
-
-
                     Console.WriteLine("Yes");
                 }
+
                 else
                 {
                     Console.WriteLine("No");
@@ -47,6 +45,7 @@ namespace Task_4
                     return false;
                 }
             }
+
             return true;
 
         }
