@@ -38,7 +38,7 @@ namespace Task_4
         public static bool IsPalindrome(string word)
         {
 
-            for (int i = 0; i < word.Length; i++)
+            for (int i = 0; i < word.Length/2; i++)
             {
                 if (word[i] != word[word.Length - i - 1])
                 {
