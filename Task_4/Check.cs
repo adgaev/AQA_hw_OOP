@@ -33,8 +33,8 @@ namespace Task_4
 
             if (String.IsNullOrWhiteSpace(word))
             {
-                Console.WriteLine("You have entered empty velue 3 times, default word is set - {0}", defaultWord);
-                return word = defaultWord.Replace(" ", String.Empty);
+                Console.WriteLine("You have entered empty value 3 times, default word is set - {0}", defaultWord);
+                word = defaultWord.Replace(" ", String.Empty);
             }
 
             return word;
