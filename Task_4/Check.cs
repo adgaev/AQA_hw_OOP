@@ -5,7 +5,7 @@ namespace Task_4
     public class Check
     {
         public string word;
-        private string defaultWord = "was it a cat i saw";
+        public string defaultWord = "was it a cat i saw";
 
         public string GetString()
         {
