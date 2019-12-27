@@ -5,6 +5,8 @@ namespace Task_4
     public class Check
     {
         public string word;
+        private string defaultWord = "was it a cat i saw";
+
         public string GetString()
         {
         
@@ -21,14 +23,21 @@ namespace Task_4
 
                 else
                 {
-                   return  word = word.Replace(" ", String.Empty);
+                   return word.Replace(" ", String.Empty);
                 }
 
                 i++;
             }
-            while (String.IsNullOrWhiteSpace(word) && i < 3);
+            while (i < 3);
+
+
+            if (String.IsNullOrWhiteSpace(word))
+            {
+                Console.WriteLine("You have entered empty velue 3 times, default word is set - {0}", defaultWord);
+                return word = defaultWord.Replace(" ", String.Empty);
+            }
+
             return word;
-          
         }
 
         public bool IsPalindrome()
