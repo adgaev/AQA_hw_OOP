@@ -5,9 +5,9 @@ namespace Task_4
     public class Check
     {
         public string word;
-        public  string IsEmpty()
+        public string GetString()
         {
-           
+        
             int i = 0;
             do
             {
@@ -28,15 +28,15 @@ namespace Task_4
             }
             while (String.IsNullOrWhiteSpace(word) && i < 3);
             return word;
+          
         }
 
         public bool IsPalindrome()
         {
-            word = IsEmpty();
+            word = GetString();
             
             for (int i = 0; i < word.Length - 1; i++)
             {
-
                 if (word[i++] != word[word.Length - i])
                 {
                     return false;
