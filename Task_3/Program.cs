@@ -1,15 +1,15 @@
-﻿namespace Task_3
+﻿using System;
+
+namespace Task_3
 {
     class Program
     {
         static void Main(string[] args)
         {
-
             Calculation calculation = new Calculation();
             calculation.GetRange();
             calculation.GetAmount();
-
-
+            Console.ReadKey();
         }
     }
 }

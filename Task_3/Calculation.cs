@@ -7,55 +7,64 @@ namespace Task_3
         public int Start;
         public int End;
         public int Amount;
-        public int i;
+        public int i = 0;
+        public bool isStart;
+        public bool isEnd;
 
         public void GetRange()
 
         {
             Console.WriteLine("Enter a range:");
-            
+
             do
             {
                 Console.Write("from: ");
-                int.TryParse(Console.ReadLine(), out Start);
+                isStart = int.TryParse(Console.ReadLine(), out Start);
                 Console.Write("to: ");
-                int.TryParse(Console.ReadLine(), out End);
- 
+                isEnd = int.TryParse(Console.ReadLine(), out End);
 
-                if (Start > End)
+                if (!isStart || !isEnd || End <= 0 || Start <= 0)
                 {
-                    Start = Start + End;
+                    Console.WriteLine("\nEntered value(s) is negative or not a number, is empty or zero!\n");
+                }
+
+
+                else if (Start - End >= 10)
+                {
+
+                    Start += End;
                     End = Start - End;
-                    Start = Start - End;
-                    Console.WriteLine("\nSwap the values for the calculation `from {0} to {1}`", Start, End);
-                   
-                }
-            
-                else if ((End - Start) < 10)
-                {
-                    Console.WriteLine("\nRange is less than 10 integers\n");
-                }
-                
-                else if ((End <= 0) || (Start <= 0))
-                {
-                    Console.WriteLine("Entered value(s) is negative, not a number or zero!");
+                    Start -= End;
+                    Console.WriteLine("\nSwap the values for the calculation `from {0} to {1}`\n", Start, End);
+                    break;
                 }
 
-               
+                else if (End - Start < 10)
+                {
+                    Console.WriteLine("\nRange is less than 10\n");
+                }
 
+                else
+                {
+                    break;
+                }
+
+                i++;
             }
-            while (End - Start > 9);
+
+            while (End - Start >= 10 || i < 3);
 
         }
         public void GetAmount()
 
-        { 
-           
-            
-         Console.WriteLine("\nDevisible by 3, not devisible by 5: ");
-               
+        {
+
+            if (End - Start >= 10)
+            {
+                Console.WriteLine("\nDevisible by 3, not devisible by 5: ");
+
                 for (int i = Start; i <= End; i++)
-                
+
                 {
                     if ((i % 3 == 0) && (i % 5 != 0))
                     {
@@ -66,12 +75,13 @@ namespace Task_3
 
                 Console.WriteLine("\nAmount = " + Amount);
             }
-           
+
+            else
+            {
+                Console.WriteLine("\nRange doesn't fit requirements!");
+            }
 
         }
 
     }
-
-
-
-
+}
