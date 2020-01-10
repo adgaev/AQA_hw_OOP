@@ -4,12 +4,10 @@ namespace Task_3
 {
     public class Calculation
     {
-        public int Start;
-        public int End;
-        public int Amount;
+        public int start;
+        public int end;
+        public int amount;
         public int i = 0;
-        public bool isStart;
-        public bool isEnd;
 
         public void GetRange()
 
@@ -19,27 +17,27 @@ namespace Task_3
             do
             {
                 Console.Write("from: ");
-                isStart = int.TryParse(Console.ReadLine(), out Start);
+                bool isStart = int.TryParse(Console.ReadLine(), out start);
                 Console.Write("to: ");
-                isEnd = int.TryParse(Console.ReadLine(), out End);
+                bool isEnd = int.TryParse(Console.ReadLine(), out end);
 
-                if (!isStart || !isEnd || End <= 0 || Start <= 0)
+                if (!isStart || !isEnd || end <= 0 || start <= 0)
                 {
                     Console.WriteLine("\nEntered value(s) is negative or not a number, is empty or zero!\n");
                 }
 
 
-                else if (Start - End >= 10)
+                else if (start - end >= 10)
                 {
 
-                    Start += End;
-                    End = Start - End;
-                    Start -= End;
-                    Console.WriteLine("\nSwap the values for the calculation `from {0} to {1}`\n", Start, End);
+                    start += end;
+                    end = start - end;
+                    start -= end;
+                    Console.WriteLine("\nSwap the values for the calculation `from {0} to {1}`\n", start, end);
                     break;
                 }
 
-                else if (End - Start < 10)
+                else if (end - start < 10)
                 {
                     Console.WriteLine("\nRange is less than 10\n");
                 }
@@ -50,30 +48,31 @@ namespace Task_3
                 }
 
                 i++;
-            }
+        }
 
-            while (End - Start >= 10 || i < 3);
+            while (end - start >= 10 || i < 3);
 
         }
+
         public void GetAmount()
 
         {
 
-            if (End - Start >= 10)
+            if (end - start >= 10)
             {
                 Console.WriteLine("\nDevisible by 3, not devisible by 5: ");
 
-                for (int i = Start; i <= End; i++)
+                for (int i = start; i <= end; i++)
 
                 {
                     if ((i % 3 == 0) && (i % 5 != 0))
                     {
                         Console.Write("|" + i);
-                        Amount += i;
+                        amount += i;
                     }
                 }
 
-                Console.WriteLine("\nAmount = " + Amount);
+                Console.WriteLine("\nAmount = " + amount);
             }
 
             else
