@@ -4,7 +4,7 @@ namespace Task_3
 {
     public class Calculation
     {
-
+        //test
         public int Start;
         public int End;
         public int Amount;
