@@ -21,7 +21,7 @@ namespace Task_3
                 Console.Write("to: ");
                 bool isEnd = int.TryParse(Console.ReadLine(), out end);
 
-                if (!isStart || !isEnd || end <= 0 || start <= 0)
+                if (!isStart || !isEnd || end < 0 || start < 0)
                 {
                     Console.WriteLine("\nEntered value(s) is negative or not a number, is empty or zero!\n");
                 }
@@ -30,9 +30,9 @@ namespace Task_3
                 else if (start - end >= 10)
                 {
 
-                    start += end;
-                    end = start - end;
-                    start -= end;
+                    int temp = start;
+                    start = end;
+                    end = temp;
                     Console.WriteLine("\nSwap the values for the calculation `from {0} to {1}`\n", start, end);
                     break;
                 }
