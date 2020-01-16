@@ -35,18 +35,12 @@ namespace Task_3
                     end = temp;
                     Console.WriteLine("\nSwap the values for the calculation `from {0} to {1}`\n", start, end);
                     break;
-                }
-
-                else if (end - start < 10)
-                {
-                    Console.WriteLine("\nRange is less than 10\n");
-                }
+                }                              
 
                 else
                 {
                     break;
                 }
-
                 i++;
         }
 
